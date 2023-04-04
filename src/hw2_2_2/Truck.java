@@ -1,15 +1,16 @@
 package hw2_2_2;
 
-public class Truck extends Transport implements UpdateTyre, CheckEngine, CheckTrailer {
-
+public class Truck extends Transport implements CheckEngine, CheckTrailer {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
     @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public void service() {
+        checkType();
+        checkTrailer();
+        checkEngine();
     }
 
     @Override

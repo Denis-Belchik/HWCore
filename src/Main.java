@@ -1,9 +1,26 @@
 import hw2_2.*;
+import hw2_2_2.*;
 
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        ServiceStation station = new ServiceStation();
+        Transport[] transports = {
+                new Car("car1", 4),
+                new Car("car2", 4),
+                new Truck("truck1", 6),
+                new Truck("truck1", 8),
+                new Bicycle("bicycle1", 2),
+                new Bicycle("bicycle2", 2)
+        };
+
+        for (Transport transport : transports) {
+            station.check(transport);
+        }
+    }
+
+    private static void hw2_2() {
         Gryffindor[] gryffindors = new Gryffindor[]{
                 new Gryffindor("Гарри Поттер", random(), random(), random(), random(), random()),
                 new Gryffindor("Гермиона Грейнджер", random(), random(), random(), random(), random()),
@@ -28,7 +45,7 @@ public class Main {
                 new Ravenclaw("Маркус Белби", random(), random(), random(), random(), random(), random()),
         };
 
-        for (Slytherin slytherin: slytherins) {
+        for (Slytherin slytherin : slytherins) {
             slytherin.printStudent();
         }
 

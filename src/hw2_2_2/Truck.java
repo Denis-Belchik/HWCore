@@ -1,6 +1,6 @@
 package hw2_2_2;
 
-public class Truck extends Transport implements CheckEngine, CheckTrailer {
+public class Truck extends TransportEngine {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -13,12 +13,6 @@ public class Truck extends Transport implements CheckEngine, CheckTrailer {
         checkEngine();
     }
 
-    @Override
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    @Override
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }

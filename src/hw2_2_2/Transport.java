@@ -1,6 +1,6 @@
 package hw2_2_2;
 
-public abstract class Transport {
+public abstract class Transport implements Service {
     private String modelName;
     private int wheelsCount;
 
@@ -8,8 +8,6 @@ public abstract class Transport {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
-
-    public abstract void service();
 
     public void checkType(){
         for (int i = 0; i < getWheelsCount(); i++) {
@@ -25,15 +23,8 @@ public abstract class Transport {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
 }

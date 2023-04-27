@@ -53,24 +53,5 @@ public class Collection {
         }
         System.out.println(mapa);
 
-//        Collections.sort(stringList);
-//        String temp = "";
-//        int count = 0;
-//        for (String val : stringList) {
-//            if (!temp.equals(val)) {
-//                //System.out.println(count);
-//                temp = val;
-//                count = 0;
-//
-//            } else {
-//                count++;
-//
-//            }
-//            System.out.println(count);
-//        }
-
-
     }
-
-
 }

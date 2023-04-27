@@ -43,15 +43,20 @@ public class Collection {
 
     private static void task4() {
         List<String> stringList = new ArrayList<>(List.of("qaz", "wsx", "qaz", "qaz", "edc", "wsx"));
-        Map<String, Integer> mapa = new HashMap<>();
-        for (String list : stringList) {
-            if (mapa.containsKey(list)) {
-                mapa.put(list, mapa.get(list) + 1);
-            } else {
-                mapa.put(list, 0);
-            }
+//        Map<String, Integer> mapa = new HashMap<>();
+//        for (String list : stringList) {
+//            if (mapa.containsKey(list)) {
+//                mapa.put(list, mapa.get(list) + 1);
+//            } else {
+//                mapa.put(list, 0);
+//            }
+//        }
+//        System.out.println(mapa);
+
+        Set<String> hashSet = new HashSet<>(stringList);
+        for (String set : hashSet) {
+            System.out.println(Collections.frequency(stringList, set) - 1);
         }
-        System.out.println(mapa);
 
     }
 }

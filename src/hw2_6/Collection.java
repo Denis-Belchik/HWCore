@@ -43,9 +43,15 @@ public class Collection {
 
     private static void task4() {
         List<String> stringList = new ArrayList<>(List.of("qaz", "wsx", "qaz", "qaz", "edc", "wsx"));
-        Set<String> stringSet = new HashSet<>(stringList);
-        System.out.println(stringList.size() - stringSet.size());
+        Map<String, Integer> mapa = new HashMap<>();
+        for (String list : stringList) {
+            if (mapa.containsKey(list)) {
+                mapa.put(list, mapa.get(list) + 1);
+            } else {
+                mapa.put(list, 0);
+            }
+        }
+        System.out.println(mapa);
+
     }
-
-
 }

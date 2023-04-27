@@ -5,6 +5,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    private static void hw2_2_2(){
         ServiceStation station = new ServiceStation();
         Transport[] transports = {
                 new Car("car1", 4),
